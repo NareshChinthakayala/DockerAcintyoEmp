@@ -1,4 +1,4 @@
-FROM openjdk:21
+FROM openjdk:17
 MAINTAINER "Naresh"
 COPY target/EmpProject-0.0.1-SNAPSHOT.jar  /usr/app/
 WORKDIR /usr/app/
