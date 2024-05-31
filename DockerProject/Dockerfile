@@ -1,5 +1,6 @@
 FROM eclipse-temurin:17-jdk-alpine
-VOLUME /tmp
-ARG JAR_FILE
-COPY ${DockerProject.jar} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+MAINTAINER "harsha"
+COPY target/DockerProject-0.0.1-SNAPSHOT.jar  /usr/app/
+WORKDIR /usr/app/
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "DockerProject-0.0.1-SNAPSHOT.jar"]
