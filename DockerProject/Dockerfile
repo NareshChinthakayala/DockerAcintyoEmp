@@ -1,6 +1,5 @@
-FROM openjdk:11
-MAINTAINER "Ashok"
-COPY target/DockerProject.jar  /usr/app/
-WORKDIR /usr/app/
-EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "DockerProject.jar"]
+FROM eclipse-temurin:17-jdk-alpine
+VOLUME /tmp
+ARG JAR_FILE
+COPY ${DockerProject.jar} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
