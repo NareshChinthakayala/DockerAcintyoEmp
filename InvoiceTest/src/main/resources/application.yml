@@ -12,7 +12,7 @@ logging:
     com:
       acintyo: INFO
 server:
-  port: 9090
+  port: 8080
 spring:
   application:
     name: Invoice
